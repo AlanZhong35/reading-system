@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col, Spinner } from 'react-bootstrap';
 
 const StatForm = () => {
     const [formData, setFormData] = useState({
@@ -11,7 +11,8 @@ const StatForm = () => {
         '3P%': ''
     });
 
-    const [prediction, setPrediction] = useState(null);
+    const [prediction, setPrediction] = useState(null)
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
         setFormData({
@@ -22,6 +23,7 @@ const StatForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true)
         const requestData = {
             PTS: [parseFloat(formData.PTS)],
             AST: [parseFloat(formData.AST)],
@@ -39,10 +41,12 @@ const StatForm = () => {
                 },
                 body: JSON.stringify(requestData)
             });
-            const data = await response.json();
-            setPrediction(data.predict);
+            const data = await response.json()
+            setPrediction(data.predict)
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error:', error)
+        }finally {
+            setLoading(false)
         }
     };
 
@@ -73,8 +77,22 @@ const StatForm = () => {
                         </Col>
                     ))}
                 </Row>
-                <Button variant="primary" type="submit">
-                    Predict Salary
+                <br/>
+                <Button variant="primary" type="submit" disabled={loading}>
+                    {loading ? (
+                        <>
+                            <Spinner
+                                as="span"
+                                animation="border"
+                                size="sm"
+                                role="status"
+                                aria-hidden="true"
+                            />{' '}
+                            Loading...
+                        </>
+                    ) : (
+                        'Predict Salary'
+                    )}
                 </Button>
             </Form>
             {prediction !== null && (
