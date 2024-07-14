@@ -7,7 +7,7 @@ const Dashboard = () => {
         <>
         <Container>
             <Row>
-              <h1>Machine Learning App</h1>
+              <h1>Alan's Machine Learning App</h1>
         </Row>
         <Row>
           <StatForm></StatForm>

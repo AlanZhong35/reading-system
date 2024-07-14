@@ -32,7 +32,7 @@ const StatForm = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/getPredictionOutput', {
+            const response = await fetch('https://reading-system.onrender.com/getPredictionOutput', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
