@@ -4,7 +4,7 @@ import ThreeScene from "./ThreeScene.jsx";
 const Home = () => {
 
     return (
-        <div>
+        <div style={{marginTop:"56px"}}>
             <h1>Welcome Home</h1>
             <div  style={{ width: '100vw', height: '100vh'}} >
             <ThreeScene/>

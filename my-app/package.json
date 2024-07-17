@@ -2,7 +2,7 @@
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://alanzhong35.github.io/reading-system/",
+  "homepage": "https://alanzhong35.github.io/reading-system",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

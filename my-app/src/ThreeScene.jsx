@@ -25,12 +25,26 @@ const ThreeScene = () => {
         camera.position.z = 5;
 
         // Animation/render loop
+        let direction = 1
         const animate = () => {
             requestAnimationFrame(animate);
             cube.rotation.x += 0.01;
             cube.rotation.y += 0.01;
             torus.rotation.z += 0.001
+            torus.rotation.x += 0.001
             renderer.render(scene, camera);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+
+            // Move the cube back and forth
+            cube.position.x += 0.003 * direction;
+
+            // Check boundaries to reverse direction
+            if (cube.position.x >= 0.7) {
+                direction = -1; // Reverse direction
+            } else if (cube.position.x <= -0.7) {
+                direction = 1; // Reverse direction
+            }
         };
 
         animate();
