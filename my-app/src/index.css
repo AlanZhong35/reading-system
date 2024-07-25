@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*.navbar {*/
+/*  position: fixed; !* Fix the navbar at the top of the viewport *!*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  z-index: 1000; !* Ensure it stays on top *!*/
+/*}*/
+
 a {
   font-weight: 500;
   color: #646cff;
