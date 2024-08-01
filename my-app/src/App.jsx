@@ -12,7 +12,7 @@ function App() {
         <Router>
             <Navbar  fixed="top" bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand as={NavLink} to="/reading-system">Alan's Website</Navbar.Brand>
+                    <Navbar.Brand as={NavLink} to="/reading-system/">Alan's Website</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
