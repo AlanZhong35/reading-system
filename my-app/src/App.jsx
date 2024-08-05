@@ -3,6 +3,7 @@ import './App.css';
 import Dashboard from './Dashboard';
 import Home from './Home';
 import BookTracker from "./BookTracker";
+import AboutMe from './AboutMe';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/reading-system/" element={<Home />} />
                     <Route path="/reading-system/salary-predictor" element={<Dashboard />} />
                     <Route path="/reading-system/book-tracker" element={<BookTracker />} />
+                    <Route path="/reading-system/about-me" element={<AboutMe />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Container>
