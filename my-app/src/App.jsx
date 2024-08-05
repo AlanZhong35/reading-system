@@ -18,6 +18,7 @@ function App() {
                         <Nav className="mr-auto">
                             <Nav.Link as={NavLink} to="/reading-system/salary-predictor">NBA Salary Predictor</Nav.Link>
                             <Nav.Link as={NavLink} to="/reading-system/book-tracker">Book Tracker</Nav.Link>
+                            <Nav.Link as={NavLink} to="/reading-system/about-me">About Me</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
