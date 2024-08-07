@@ -9,7 +9,7 @@ const PlayerSelect = () => {
     const [similarPlayers, setSimilarPlayers] = useState([]);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/getPlayerNames", {
+        fetch("https://reading-system.onrender.com/getPlayerNames", {
             method: 'GET', // Use GET for fetching data
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,8 @@ const PlayerSelect = () => {
     };
 
     const findSimilarPlayers = () => {
-        fetch("http://127.0.0.1:5000/findSimilarPlayers", {
+        setLoading(true)
+        fetch("https://reading-system.onrender.com/findSimilarPlayers", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +54,9 @@ const PlayerSelect = () => {
             })
             .catch(error => {
                 console.error("Error fetching player names:", error); // Log errors
-            });
+            }).finally(() => {
+            setLoading(false); // Reset loading state to false after request completes
+        });
     };
 
 
