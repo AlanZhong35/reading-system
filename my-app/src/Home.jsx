@@ -12,7 +12,7 @@ const Home = () => {
             <ReactTyped
             strings={['Software Engineer', 'Machine Learning Enthusiast', 'Soccer Player', 'Musician']}
             typeSpeed={70}
-            backSpeed={60}
+            backSpeed={50}
             loop
             />
         </h2>
