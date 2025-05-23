@@ -8,7 +8,7 @@ import PlayerSelect from "./PlayerSelect.jsx";
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
-
+import GodotGame from './Game.jsx'
 
 function App() {
     return (
@@ -22,17 +22,19 @@ function App() {
                             <Nav.Link as={NavLink} to="/reading-system/salary-predictor">NBA Salary Predictor</Nav.Link>
                             <Nav.Link as={NavLink} to="/reading-system/player-similarity">NBA Player Similarity</Nav.Link>
                             <Nav.Link as={NavLink} to="/reading-system/book-tracker">Book Tracker</Nav.Link>
+                            <Nav.Link as={NavLink} to="/reading-system/knight-adventure">Knight Adventure</Nav.Link>
                             <Nav.Link as={NavLink} to="/reading-system/about-me">About Me</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <Container className="content">
+            <Container className="content" fluid>
                 <Routes>
                     <Route path="/reading-system/" element={<Home />} />
                     <Route path="/reading-system/salary-predictor" element={<Dashboard />} />
                     <Route path="/reading-system/book-tracker" element={<BookTracker />} />
                     <Route path="/reading-system/player-similarity" element={<PlayerSelect />} />
+                    <Route path="/reading-system/knight-adventure" element={<GodotGame />} />
                     <Route path="/reading-system/about-me" element={<AboutMe />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>

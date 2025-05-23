@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwlesv67y3oid"]
+
+[ext_resource type="Script" uid="uid://1em8a2u84lww" path="res://scripts/scorekeeper.gd" id="1_ubdop"]
+[ext_resource type="FontFile" uid="uid://pqy4kb0uqyoh" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_t8sya"]
+
+[node name="scorekeeper" type="Node"]
+script = ExtResource("1_ubdop")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 439.0
+offset_top = -75.0
+offset_right = 594.0
+offset_bottom = -52.0
+theme_override_fonts/font = ExtResource("2_t8sya")
+theme_override_font_sizes/font_size = 8
+text = "You collected 0 coins."
