@@ -100,6 +100,8 @@ const StatForm = () => {
                      <h4>Predicted Salary: {formatSalary(prediction.toFixed(2))}</h4>
                 </div>
             )}
+             <br></br>
+            <text>Linear regression performed on Jamie Welsh's curated <a href="https://www.kaggle.com/datasets/jamiewelsh2/nba-player-salaries-2022-23-season">2022-23 NBA stats</a></text>
         </Container>
     );
 };

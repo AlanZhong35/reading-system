@@ -15,6 +15,8 @@ const GodotGame = () => {
                 style={{ width: '90vh', height: '90vh', border: 'none' }}
                 allowFullScreen
               ></iframe>
+              <br></br>
+              <text>Credit to Brackey's <a href="https://www.youtube.com/watch?v=LOhfqjmasi0">Godot Tutorial</a></text>
         </Col>
       </Row>
     </Container>

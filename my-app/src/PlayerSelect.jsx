@@ -62,9 +62,9 @@ const PlayerSelect = () => {
 
     return (
         <div className="container">
-            <h2>Select an NBA Player</h2>
+            <h1>Select an NBA Player</h1>
             <Form.Group controlId="playerSelect">
-                <Form.Label>Choose a player</Form.Label>
+                <Form.Label>Choose a player to find top 5 statistically-similar matches</Form.Label>
                 <Form.Control
                     as="select"
                     value={selectedPlayer}
@@ -100,6 +100,8 @@ const PlayerSelect = () => {
                     </ListGroup>
                 </div>
             )}
+            <br></br>
+            <text>K-means and PCA performed on Jamie Welsh's curated <a href="https://www.kaggle.com/datasets/jamiewelsh2/nba-player-salaries-2022-23-season">2022-23 NBA stats</a></text>
         </div>
     );
 };
